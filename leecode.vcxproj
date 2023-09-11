@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8A82DAF2-EED4-480B-9243-0594E3C4B286}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>leecode</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="1.cpp" />
+    <ClCompile Include="100.cpp" />
+    <ClCompile Include="1005.cpp" />
+    <ClCompile Include="101.cpp" />
+    <ClCompile Include="1019.cpp" />
+    <ClCompile Include="102.cpp" />
+    <ClCompile Include="1025.cpp" />
+    <ClCompile Include="1029.cpp" />
+    <ClCompile Include="1033.cpp" />
+    <ClCompile Include="1035.cpp" />
+    <ClCompile Include="104.cpp" />
+    <ClCompile Include="1047.cpp" />
+    <ClCompile Include="105.cpp" />
+    <ClCompile Include="106.cpp" />
+    <ClCompile Include="107.cpp" />
+    <ClCompile Include="108.cpp" />
+    <ClCompile Include="1089.cpp" />
+    <ClCompile Include="11.cpp" />
+    <ClCompile Include="110.cpp" />
+    <ClCompile Include="1108.cpp" />
+    <ClCompile Include="111.cpp" />
+    <ClCompile Include="112.cpp" />
+    <ClCompile Include="113.cpp" />
+    <ClCompile Include="114.cpp" />
+    <ClCompile Include="1143.cpp" />
+    <ClCompile Include="116.cpp" />
+    <ClCompile Include="118.cpp" />
+    <ClCompile Include="119.cpp" />
+    <ClCompile Include="1190.cpp" />
+    <ClCompile Include="1207.cpp" />
+    <ClCompile Include="121.cpp" />
+    <ClCompile Include="1217.cpp" />
+    <ClCompile Include="122.cpp" />
+    <ClCompile Include="125.cpp" />
+    <ClCompile Include="128.cpp" />
+    <ClCompile Include="1281.cpp" />
+    <ClCompile Include="129.cpp" />
+    <ClCompile Include="131.cpp" />
+    <ClCompile Include="134.cpp" />
+    <ClCompile Include="135.cpp" />
+    <ClCompile Include="137.cpp" />
+    <ClCompile Include="141.cpp" />
+    <ClCompile Include="142.cpp" />
+    <ClCompile Include="144.cpp" />
+    <ClCompile Include="145.cpp" />
+    <ClCompile Include="15.cpp" />
+    <ClCompile Include="150.cpp" />
+    <ClCompile Include="1507.cpp" />
+    <ClCompile Include="151.cpp" />
+    <ClCompile Include="1513.cpp" />
+    <ClCompile Include="1657.cpp" />
+    <ClCompile Include="1680.cpp" />
+    <ClCompile Include="17.cpp" />
+    <ClCompile Include="172.cpp" />
+    <ClCompile Include="179.cpp" />
+    <ClCompile Include="19.cpp" />
+    <ClCompile Include="190.cpp" />
+    <ClCompile Include="191.cpp" />
+    <ClCompile Include="198.cpp" />
+    <ClCompile Include="199.cpp" />
+    <ClCompile Include="20.cpp" />
+    <ClCompile Include="201.cpp" />
+    <ClCompile Include="202.cpp" />
+    <ClCompile Include="203.cpp" />
+    <ClCompile Include="2038.cpp" />
+    <ClCompile Include="205.cpp" />
+    <ClCompile Include="206.cpp" />
+    <ClCompile Include="209.cpp" />
+    <ClCompile Include="21.cpp" />
+    <ClCompile Include="213.cpp" />
+    <ClCompile Include="2130.cpp" />
+    <ClCompile Include="216.cpp" />
+    <ClCompile Include="217.cpp" />
+    <ClCompile Include="222.cpp" />
+    <ClCompile Include="225.cpp" />
+    <ClCompile Include="226.cpp" />
+    <ClCompile Include="228.cpp" />
+    <ClCompile Include="229.cpp" />
+    <ClCompile Include="2315.cpp" />
+    <ClCompile Include="232.cpp" />
+    <ClCompile Include="233.cpp" />
+    <ClCompile Include="237.cpp" />
+    <ClCompile Include="238.cpp" />
+    <ClCompile Include="239.cpp" />
+    <ClCompile Include="24.cpp" />
+    <ClCompile Include="2418.cpp" />
+    <ClCompile Include="242.cpp" />
+    <ClCompile Include="257.cpp" />
+    <ClCompile Include="258.cpp" />
+    <ClCompile Include="26.cpp" />
+    <ClCompile Include="2605.cpp" />
+    <ClCompile Include="263.cpp" />
+    <ClCompile Include="2639.cpp" />
+    <ClCompile Include="27.cpp" />
+    <ClCompile Include="2706.cpp" />
+    <ClCompile Include="2710.cpp" />
+    <ClCompile Include="2716.cpp" />
+    <ClCompile Include="2733.cpp" />
+    <ClCompile Include="274.cpp" />
+    <ClCompile Include="28.cpp" />
+    <ClCompile Include="2806.cpp" />
+    <ClCompile Include="2807.cpp" />
+    <ClCompile Include="2815.cpp" />
+    <ClCompile Include="2828.cpp" />
+    <ClCompile Include="283.cpp" />
+    <ClCompile Include="299.cpp" />
+    <ClCompile Include="300.cpp" />
+    <ClCompile Include="326.cpp" />
+    <ClCompile Include="328.cpp" />
+    <ClCompile Include="338.cpp" />
+    <ClCompile Include="34.cpp" />
+    <ClCompile Include="343.cpp" />
+    <ClCompile Include="344.cpp" />
+    <ClCompile Include="345.cpp" />
+    <ClCompile Include="347.cpp" />
+    <ClCompile Include="349.cpp" />
+    <ClCompile Include="35.cpp" />
+    <ClCompile Include="350.cpp" />
+    <ClCompile Include="367.cpp" />
+    <ClCompile Include="374.cpp" />
+    <ClCompile Include="376.cpp" />
+    <ClCompile Include="383.cpp" />
+    <ClCompile Include="387.cpp" />
+    <ClCompile Include="389.cpp" />
+    <ClCompile Include="39.cpp" />
+    <ClCompile Include="394.cpp" />
+    <ClCompile Include="396.cpp" />
+    <ClCompile Include="4.cpp" />
+    <ClCompile Include="40.cpp" />
+    <ClCompile Include="404.cpp" />
+    <ClCompile Include="405.cpp" />
+    <ClCompile Include="41.cpp" />
+    <ClCompile Include="412.cpp" />
+    <ClCompile Include="414.cpp" />
+    <ClCompile Include="42.cpp" />
+    <ClCompile Include="43.cpp" />
+    <ClCompile Include="443.cpp" />
+    <ClCompile Include="452.cpp" />
+    <ClCompile Include="454.cpp" />
+    <ClCompile Include="455.cpp" />
+    <ClCompile Include="459.cpp" />
+    <ClCompile Include="46.cpp" />
+    <ClCompile Include="461.cpp" />
+    <ClCompile Include="468.cpp" />
+    <ClCompile Include="47.cpp" />
+    <ClCompile Include="496.cpp" />
+    <ClCompile Include="503.cpp" />
+    <ClCompile Include="504.cpp" />
+    <ClCompile Include="507.cpp" />
+    <ClCompile Include="509.cpp" />
+    <ClCompile Include="513.cpp" />
+    <ClCompile Include="515.cpp" />
+    <ClCompile Include="520.cpp" />
+    <ClCompile Include="53.cpp" />
+    <ClCompile Include="532.cpp" />
+    <ClCompile Include="539.cpp" />
+    <ClCompile Include="54.cpp" />
+    <ClCompile Include="541.cpp" />
+    <ClCompile Include="55.cpp" />
+    <ClCompile Include="551.cpp" />
+    <ClCompile Include="557.cpp" />
+    <ClCompile Include="559.cpp" />
+    <ClCompile Include="56.cpp" />
+    <ClCompile Include="566.cpp" />
+    <ClCompile Include="57.cpp" />
+    <ClCompile Include="575.cpp" />
+    <ClCompile Include="589.cpp" />
+    <ClCompile Include="59.cpp" />
+    <ClCompile Include="590.cpp" />
+    <ClCompile Include="6.cpp" />
+    <ClCompile Include="600.cpp" />
+    <ClCompile Include="605.cpp" />
+    <ClCompile Include="62.cpp" />
+    <ClCompile Include="63.cpp" />
+    <ClCompile Include="637.cpp" />
+    <ClCompile Include="645.cpp" />
+    <ClCompile Include="647.cpp" />
+    <ClCompile Include="654.cpp" />
+    <ClCompile Include="674.cpp" />
+    <ClCompile Include="693.cpp" />
+    <ClCompile Include="7.cpp" />
+    <ClCompile Include="70.cpp" />
+    <ClCompile Include="704.cpp" />
+    <ClCompile Include="707.cpp" />
+    <ClCompile Include="709.cpp" />
+    <ClCompile Include="718.cpp" />
+    <ClCompile Include="724.cpp" />
+    <ClCompile Include="728.cpp" />
+    <ClCompile Include="735.cpp" />
+    <ClCompile Include="738.cpp" />
+    <ClCompile Include="739.cpp" />
+    <ClCompile Include="746.cpp" />
+    <ClCompile Include="747.cpp" />
+    <ClCompile Include="75.cpp" />
+    <ClCompile Include="754.cpp" />
+    <ClCompile Include="763.cpp" />
+    <ClCompile Include="767.cpp" />
+    <ClCompile Include="77.cpp" />
+    <ClCompile Include="771.cpp" />
+    <ClCompile Include="779.cpp" />
+    <ClCompile Include="788.cpp" />
+    <ClCompile Include="796.cpp" />
+    <ClCompile Include="8.cpp" />
+    <ClCompile Include="804.cpp" />
+    <ClCompile Include="824.cpp" />
+    <ClCompile Include="831.cpp" />
+    <ClCompile Include="844.cpp" />
+    <ClCompile Include="88.cpp" />
+    <ClCompile Include="9.cpp" />
+    <ClCompile Include="905.cpp" />
+    <ClCompile Include="907.cpp" />
+    <ClCompile Include="912.cpp" />
+    <ClCompile Include="929.cpp" />
+    <ClCompile Include="93.cpp" />
+    <ClCompile Include="937.cpp" />
+    <ClCompile Include="94.cpp" />
+    <ClCompile Include="957.cpp" />
+    <ClCompile Include="96.cpp" />
+    <ClCompile Include="97.cpp" />
+    <ClCompile Include="976.cpp" />
+    <ClCompile Include="977.cpp" />
+    <ClCompile Include="991.cpp" />
+    <ClCompile Include="itv01.01.cpp" />
+    <ClCompile Include="itv01.02.cpp" />
+    <ClCompile Include="itv01.03.cpp" />
+    <ClCompile Include="itv01.04.cpp" />
+    <ClCompile Include="itv01.06.cpp" />
+    <ClCompile Include="itv01.09.cpp" />
+    <ClCompile Include="itv02.01.cpp" />
+    <ClCompile Include="itv02.03.cpp" />
+    <ClCompile Include="itv02.05.cpp" />
+    <ClCompile Include="itv02.07.cpp" />
+    <ClCompile Include="itv03.02.cpp" />
+    <ClCompile Include="itv03.04.cpp" />
+    <ClCompile Include="itv03.05.cpp" />
+    <ClCompile Include="itv03.06.cpp" />
+    <ClCompile Include="itv04.02.cpp" />
+    <ClCompile Include="itv04.03.cpp" />
+    <ClCompile Include="itv04.04.cpp" />
+    <ClCompile Include="itv04.06.cpp" />
+    <ClCompile Include="itv05.03.cpp" />
+    <ClCompile Include="itv0502.cpp" />
+    <ClCompile Include="itv08.03.cpp" />
+    <ClCompile Include="itv0801.cpp" />
+    <ClCompile Include="itv10.01.cpp" />
+    <ClCompile Include="itv16.15.cpp" />
+    <ClCompile Include="itv17.04.cpp" />
+    <ClCompile Include="itv17.10.cpp" />
+    <ClCompile Include="itv17.12.cpp" />
+    <ClCompile Include="itv17.15.cpp" />
+    <ClCompile Include="itv17.16.cpp" />
+    <ClCompile Include="itv17.09.cpp" />
+    <ClCompile Include="itv17.22.cpp" />
+    <ClCompile Include="LCP03.cpp" />
+    <ClCompile Include="LCP50.cpp" />
+    <ClCompile Include="LCP72.cpp" />
+    <ClCompile Include="LCR003.cpp" />
+    <ClCompile Include="LCR018.cpp" />
+    <ClCompile Include="LCR032.cpp" />
+    <ClCompile Include="LCR037.cpp" />
+    <ClCompile Include="LCR059.cpp" />
+    <ClCompile Include="LCR060.cpp" />
+    <ClCompile Include="LCR068.cpp" />
+    <ClCompile Include="LCR070.cpp" />
+    <ClCompile Include="offer027.cpp" />
+    <ClCompile Include="offer03.cpp" />
+    <ClCompile Include="offer05.cpp" />
+    <ClCompile Include="offer06.cpp" />
+    <ClCompile Include="offer077.cpp" />
+    <ClCompile Include="offer10-1.cpp" />
+    <ClCompile Include="offer10.cpp" />
+    <ClCompile Include="offer14-1.cpp" />
+    <ClCompile Include="offer15.cpp" />
+    <ClCompile Include="offer17.cpp" />
+    <ClCompile Include="offer25.cpp" />
+    <ClCompile Include="offer30.cpp" />
+    <ClCompile Include="offer32-1.cpp" />
+    <ClCompile Include="offer32-2.cpp" />
+    <ClCompile Include="offer32-3.cpp" />
+    <ClCompile Include="offer34.cpp" />
+    <ClCompile Include="offer39.cpp" />
+    <ClCompile Include="offer41.cpp" />
+    <ClCompile Include="offer43.cpp" />
+    <ClCompile Include="offer45.cpp" />
+    <ClCompile Include="offer47.cpp" />
+    <ClCompile Include="offer49.cpp" />
+    <ClCompile Include="offer50.cpp" />
+    <ClCompile Include="offer53.cpp" />
+    <ClCompile Include="offer55-1.cpp" />
+    <ClCompile Include="offer56-1.cpp" />
+    <ClCompile Include="offer56_2.cpp" />
+    <ClCompile Include="offer58-1.cpp" />
+    <ClCompile Include="offer58.cpp" />
+    <ClCompile Include="offer64.cpp" />
+    <ClCompile Include="offer65.cpp" />
+    <ClCompile Include="offer66.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
